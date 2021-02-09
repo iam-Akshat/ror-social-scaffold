@@ -1,0 +1,10 @@
+<div>
+    <%if friend_or_not == false %>
+        <%= render 'friendships/send' %>
+    <% else %>
+        <span class="friendship-status">
+            <%= friend_or_not %>
+        </span>
+        
+    <% end %>
+</div>

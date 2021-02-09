@@ -13,3 +13,23 @@
  *= require_tree .
  *= require_self
  */
+
+ .btn.btn-danger{
+      background-color: #f00
+  }
+  .btn.btn-danger:hover{
+      background-color: rgb(110, 1, 1);
+  }
+  .btns-holder{
+      display:flex;
+      width:max-content;
+  }
+  .btns-holder .btn{
+      margin-left: 2rem;
+  }
+  .friendship-status{
+      padding: 0.25rem;
+      background-color: rgb(0, 128, 0);
+      border-radius: 8px;
+      color: white;
+  }

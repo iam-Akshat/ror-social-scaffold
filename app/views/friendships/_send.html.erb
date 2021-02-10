@@ -1,11 +1,11 @@
 <div>
 <%if @user %>
-    <%= form_with model:@friendship,url:'send_request/' do |f| %>
+    <%= form_with model:@friendship,url:'/send_request/' do |f| %>
     <%= hidden_field_tag 'to_friend' , @user.id%>
     <%= f.submit 'Send Request' %>
     <% end %>
 <% else %>
-    <%= form_with model:@friendship,url:'send_request/' do |f| %>
+    <%= form_with model:@friendship,url:'/send_request/' do |f| %>
     <%= hidden_field_tag 'to_friend' ,  user.id%>
     <%= f.submit 'Send Request' %>
     <% end %>

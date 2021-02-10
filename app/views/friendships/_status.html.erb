@@ -1,6 +1,6 @@
 <div>
     <%if friend_or_not(@user || user) == false %>
-        <%= render partial:'friendships/send',locals: {user: user}%>
+        <%= render partial:'friendships/send',locals: {user: @user || user}%>
     <% else %>
         <% if friend_or_not(@user || user).length == 0 %>
             <%= '' %>

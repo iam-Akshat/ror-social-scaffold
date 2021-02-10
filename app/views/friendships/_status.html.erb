@@ -1,10 +1,13 @@
 <div>
-    <%if friend_or_not == false %>
-        <%= render 'friendships/send' %>
+    <%if friend_or_not(@user || user) == false %>
+        <%= render partial:'friendships/send',locals: {user: user}%>
     <% else %>
-        <span class="friendship-status">
-            <%= friend_or_not %>
-        </span>
-        
+        <% if friend_or_not(@user || user).length == 0 %>
+            <%= '' %>
+        <% else %>
+            <span class="friendship-status">
+            <%= friend_or_not(@user || user) %>
+            </span>
+        <% end %>
     <% end %>
 </div>

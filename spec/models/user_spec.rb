@@ -10,9 +10,9 @@ RSpec.describe User do
 
     context "assosciations" do
          it { should have_many(:posts).class_name('Post') }
-         it { should have_many(:likes).class_name('Like') }
-         it { should have_many(:comments).class_name('Comment') }
-         it { should have_many(:friendships).class_name('Friendship') }
-         it { should have_many(:recieved_friends) }
+         it { should have_many(:likes).class_name('Like').dependent(:destroy) }
+         it { should have_many(:comments).class_name('Comment').dependent(:destroy) }
+         it { should have_many(:friendships).class_name('Friendship').with_foreign_key('recieved_friend_id') }
+         it { should have_many(:recieved_friends).through(:friendships) }
     end
 end

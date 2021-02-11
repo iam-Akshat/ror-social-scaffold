@@ -18,7 +18,7 @@ RSpec.describe Post do
 
     context "assosciations" do
         it { should belong_to(:user).class_name('User') }
-        it { should have_many(:comments).class_name('Comment') }
-        it { should have_many(:likes).class_name('Like') }
+        it { should have_many(:comments).class_name('Comment').dependent(:destroy) }
+        it { should have_many(:likes).class_name('Like').dependent(:destroy) }
     end
 end

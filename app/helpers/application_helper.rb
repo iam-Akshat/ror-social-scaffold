@@ -17,6 +17,6 @@ module ApplicationHelper
   end
 
   def number_of_requests
-    "Friend requests("+current_user.friendships.pending_requests.count.to_s+")"
+    "Friend requests(#{current_user.friendships.pending_requests.count})"
   end
 end

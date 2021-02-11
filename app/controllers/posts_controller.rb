@@ -19,8 +19,13 @@ class PostsController < ApplicationController
 
   private
 
-  def timeline_posts
-    @timeline_posts ||= Post.all.ordered_by_most_recent.includes(:user)
+  def timeline_posts    
+    @timeline_posts ||= current_user.friendships.where(status:2).includes(:send_friend).map do |friendship|
+      friendship.send_friend.posts.includes(:user).ordered_by_most_recent.all.take(5)
+    end
+    @timeline_posts.push(current_user.posts.includes(:user).ordered_by_most_recent.take(5))
+    @timeline_posts = @timeline_posts.flatten
+    @timeline_posts = @timeline_posts.sort {|p1,p2| p2.created_at <=> p1.created_at}
   end
 
   def post_params

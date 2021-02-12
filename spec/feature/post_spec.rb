@@ -3,6 +3,10 @@ require_relative '../rails_helper.rb'
 RSpec.describe 'post functionality', type: :system do
     describe "posting" do
     it 'should post' do
+        user = User.find_by(email:'tea@st.com')
+        if user.nil?
+            User.create!(email:'tea@st.com',password:'123456',password_confirmation:'123456',name:'ss')
+        end
         visit root_path
         fill_in 'Email', with: 'tea@st.com'
         fill_in 'Password', with: '123456'

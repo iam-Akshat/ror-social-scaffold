@@ -52,7 +52,6 @@ group :test do
   gem 'selenium-webdriver'
   gem 'shoulda-matchers', '~> 4.0'
   gem 'webdrivers'
-  gem 'database_cleaner'
 end
 
 group :development do

@@ -25,12 +25,14 @@ module FriendshipHelper
     end
   end
 
-  def has_user_sent_request?(user)
+  def user_sent_request?(user)
     friendship = Friendship.find_by(
-        send_friend:user,
-        recieved_friend:current_user,
-        status: 1)
+      send_friend: user,
+      recieved_friend: current_user,
+      status: 1
+    )
     return false if friendship.nil?
-    return true
+
+    true
   end
 end

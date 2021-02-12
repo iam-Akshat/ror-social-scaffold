@@ -155,12 +155,12 @@ form {
       padding: 8px;
       background-color: $primary-color-light;
     }
-
+/* stylelint-disable */
     input[type="checkbox"] {
       width: fit-content;
     }
   }
-
+/* stylelint-enable */
   .actions {
     display: flex;
     justify-content: center;

@@ -1,5 +1,5 @@
 <div>
-    <% current_user.friendships.pending_requests.each do |request| %>
+    <% current_user.pending_friendships.each do |request| %>
         <div>
             <%= form_tag('/users/accept',method: "post") do %>
                 <%= hidden_field_tag 'request[send_friend_id]', request.send_friend_id %>

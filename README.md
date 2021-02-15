@@ -1,6 +1,6 @@
-# Scaffold for social media app with Ruby on Rails
+# Social media app with Ruby on Rails
 
-> This repo includes intial code for social media app with basic styling. Its purpose is to be a starting point for Microverse students.
+> A social media app built with ruby on rails
 
 ## Built With
 
@@ -9,12 +9,16 @@
 
 ## Live Demo
 
-TBA
+[Live Link](https://enigmatic-shore-05051.herokuapp.com/users/sign_in)
 
 
 ## Getting Started
 
 To get a local copy up and running follow these simple example steps.
+    `git clone https://github.com/iam-Akshat/ror-social-scaffold`
+    `cd ror-social-scaffold`
+    `bundle install`
+    `rails s`
 
 ### Prerequisites
 
@@ -65,13 +69,15 @@ Open `http://localhost:3000/` in your browser.
 
 > Tests will be added by Microverse students. There are no tests for initial features in order to make sure that students write all tests from scratch.
 
-### Deployment
-
-TBA
 
 ## Authors
 
-TBA
+👤 **Akshat Sethi**
+
+- GitHub: [@iam-Akshat](https://github.com/iam-Akshat)
+- Twitter: [@akshatsethi](https://twitter.com/akshatsethi)
+- LinkedIn: [akshatsethi](https://linkedin.com/in/akshatsethi)
+
 
 ## 🤝 Contributing
 
@@ -84,10 +90,5 @@ Feel free to check the [issues page](issues/).
 Give a ⭐️ if you like this project!
 
 ## Acknowledgments
-
-TBA
-
-## 📝 License
-
-TBA
-
+ - Odin project
+ - Microverse

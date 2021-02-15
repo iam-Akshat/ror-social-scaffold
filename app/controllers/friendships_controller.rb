@@ -5,11 +5,12 @@ class FriendshipsController < ApplicationController
   end
 
   def update
+    friendship = Friendship.find_by(request_params)
     case params['commit']
     when 'Accept'
-      Friendship.accept_friendship(request_params)
+      friendship.accept_friendship
     when 'Reject'
-      Friendship.reject_friendship(request_params)
+      friendship.reject_friendship
     end
     redirect_to user_path(current_user)
   end

@@ -18,12 +18,8 @@
           <%= menu_link_to 'All users', users_path %>
         </div>
       </div>
-      
       <% if current_user %>
         <%= link_to 'Sign out', destroy_user_session_path, method: :delete %>
-        <div class="menu-item">
-          <%= menu_link_to number_of_requests, friend_requests_path %>
-      </div>
       <% else %>
         <%= link_to 'Sign in', user_session_path %>
       <% end %>
